@@ -1,0 +1,54 @@
+<div class="fee-history">
+  <div class="fee-header">
+    <h4>Payment History</h4>
+    <div class="total-paid" *ngIf="totalPaid > 0">
+      <strong>Total Paid: {{formatAmount(totalPaid)}}</strong>
+    </div>
+  </div>
+
+  <div *ngIf="isLoading" class="loading">Loading payment history...</div>
+
+  <div *ngIf="errorMessage" class="error-message">{{errorMessage}}</div>
+
+  <div *ngIf="!isLoading && fees.length === 0" class="no-fees">
+    No payment records found.
+  </div>
+
+  <div *ngIf="!isLoading && fees.length > 0" class="fees-table-container">
+    <table class="fees-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Mode</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fee of fees">
+          <td>{{formatDate(fee.paymentDate)}}</td>
+          <td class="amount">{{formatAmount(fee.amount)}}</td>
+          <td>
+            <span class="mode-badge" [class]="'mode-' + fee.mode.toLowerCase()">
+              {{fee.mode}}
+            </span>
+          </td>
+          <td>
+            <span class="status-badge" [class]="'status-' + fee.status?.toLowerCase()">
+              {{fee.status || 'PAID'}}
+            </span>
+          </td>
+          <td>
+            <button 
+              (click)="deleteFee(fee)" 
+              class="btn btn-sm btn-delete"
+              title="Delete payment record">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+.fee-history {
+    margin-top: 15px;
+  }
+  
+  .fee-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .fee-header h4 {
+    margin: 0;
+    color: #495057;
+    font-size: 16px;
+  }
+  
+  .total-paid {
+    color: #28a745;
+    font-size: 14px;
+  }
+  
+  .fees-table-container {
+    overflow-x: auto;
+  }
+  
+  .fees-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  
+  .fees-table th,
+  .fees-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .fees-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #495057;
+  }
+  
+  .fees-table tbody tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .amount {
+    font-weight: 600;
+    color: #28a745;
+  }
+  
+  .mode-badge,
+  .status-badge {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .mode-cash {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .mode-upi {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+  
+  .mode-card {
+    background-color: #fce4ec;
+    color: #880e4f;
+  }
+  
+  .mode-bank {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+  }
+  
+  .status-paid {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status-unpaid {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .btn {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  
+  .btn-sm {
+    padding: 2px 6px;
+  }
+  
+  .btn-delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333;
+  }
+  
+  .loading,
+  .no-fees {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .fee-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .fees-table {
+      font-size: 12px;
+    }
+  
+    .fees-table th,
+    .fees-table td {
+      padding: 6px 8px;
+    }
+  }
+  

@@ -1,0 +1,7 @@
+com\naiapps\pgbackend\entity\Student.class
+com\naiapps\pgbackend\repository\FeeRepository.class
+com\naiapps\pgbackend\repository\StudentRepository.class
+com\naiapps\pgbackend\controller\StudentController.class
+com\naiapps\pgbackend\PgBackendApplication.class
+com\naiapps\pgbackend\controller\FeeController.class
+com\naiapps\pgbackend\entity\Fee.class
